@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEON ARENA | Online FPS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+
+        <a href="#" class="logo">NEON ARENA</a>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#play">Play</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#settings">Settings</a>
+        </nav>
+
+        <button class="login-btn">Login</button>
+
+    </header>
+
+
+    <!-- MAIN HOMEPAGE -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="subtitle">
+                    FREE ONLINE MULTIPLAYER FPS
+                </p>
+
+                <h1>ENTER THE ARENA.</h1>
+
+                <p class="description">
+                    Compete against players. Improve your skills.
+                    Become the champion.
+                </p>
+
+                <button id="playButton" class="play-btn">
+                    PLAY NOW
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVER BROWSER -->
+        <section id="lobby" class="lobby hidden">
+
+            <h2>FIND A MATCH</h2>
+
+            <p>Select a server and join the arena.</p>
+
+            <div class="server-controls">
+
+                <input
+                    type="text"
+                    id="serverSearch"
+                    placeholder="Search servers..."
+                >
+
+                <select id="regionFilter">
+                    <option value="All">All Regions</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                </select>
+
+                <button id="refreshButton">
+                    REFRESH
+                </button>
+
+            </div>
+
+
+            <!-- SERVER TABLE -->
+            <div class="server-header">
+
+                <span>SERVER NAME</span>
+                <span>MAP</span>
+                <span>PLAYERS</span>
+                <span>PING</span>
+                <span>ACTION</span>
+
+            </div>
+
+
+            <div id="pagination" class="pagination"></div>
+
+                <!-- JavaScript will add servers here -->
+
+            </div>
+
+
+            <p id="noServers" class="hidden">
+                No servers found.
+            </p>
+
+
+            <button id="backButton" class="back-btn">
+                BACK TO HOME
+            </button>
+
+        </section>
+
+
+        <!-- LEADERBOARD PLACEHOLDER -->
+        <section id="leaderboard" class="extra-section">
+
+            <h2>LEADERBOARD</h2>
+
+            <p>Top players will appear here.</p>
+
+        </section>
+
+
+        <!-- SETTINGS PLACEHOLDER -->
+        <section id="settings" class="extra-section">
+
+            <h2>SETTINGS</h2>
+
+            <p>Game settings will be available here.</p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>NEON ARENA © 2026 | Free to Play</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

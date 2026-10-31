@@ -1,0 +1,372 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101317;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #090c10;
+    border-bottom: 1px solid #252a31;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #b9c0c9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #55aaff;
+}
+
+.login-btn {
+    background: transparent;
+    border: 1px solid #59616b;
+    color: white;
+    padding: 10px 22px;
+    cursor: pointer;
+}
+
+/* Homepage */
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background:
+        linear-gradient(90deg, #101317 10%, rgba(16,19,23,.88) 48%, rgba(16,19,23,.25)),
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1600")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.subtitle {
+    color: #58aaff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.description {
+    color: #c0c5cc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.play-btn {
+    background: #1879dc;
+    color: white;
+    border: none;
+    padding: 17px 38px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.play-btn:hover {
+    background: #0864bd;
+}
+
+/* Multiplayer lobby */
+
+.lobby {
+    min-height: 590px;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.lobby h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.lobby p {
+    color: #aeb6c0;
+}
+
+.player-count {
+    margin: 30px 0 20px;
+    color: #58aaff;
+}
+
+.player-list {
+    max-width: 500px;
+    margin: auto;
+}
+
+.player {
+    background: #1b222b;
+    border: 1px solid #303b48;
+    padding: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.back-btn {
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: transparent;
+    border: 1px solid #59616b;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    background: #090c10;
+    border-top: 1px solid #252a31;
+    text-align: center;
+    padding: 25px;
+    color: #89919b;
+    font-size: 13px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 15px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 45px 7%;
+    }
+}
+
+/* NEON ARENA - SERVER GRID */
+
+.lobby {
+    background: #101722;
+    padding: 45px 6%;
+    min-height: 650px;
+}
+
+.lobby h2 {
+    font-size: 36px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.server-controls {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.server-controls input,
+.server-controls select {
+    background: #202d3c;
+    border: 1px solid #35475c;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.server-controls input {
+    flex: 1;
+    min-width: 160px;
+}
+
+.server-controls button {
+    background: #247ee8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.server-header {
+    display: none;
+}
+
+.server-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.server-card {
+    background: #192535;
+    border: 1px solid #34465c;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.server-card:hover {
+    transform: translateY(-4px);
+    border-color: #55aaff;
+}
+
+/* Map preview area */
+
+.server-map {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #174b78, #17243a);
+    font-size: 38px;
+}
+
+.server-card:nth-child(2) .server-map {
+    background: linear-gradient(135deg, #54366b, #25233f);
+}
+
+.server-card:nth-child(3) .server-map {
+    background: linear-gradient(135deg, #78602f, #342b24);
+}
+
+.server-card:nth-child(4) .server-map {
+    background: linear-gradient(135deg, #236358, #1c3038);
+}
+
+.server-info {
+    padding: 15px;
+}
+
+.server-info strong {
+    color: white;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.server-info small {
+    color: #aebdce;
+    font-size: 12px;
+}
+
+.server-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    color: #d1deed;
+    font-size: 12px;
+}
+
+.join-btn {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+    background: #247ee8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background: #0865cb;
+}
+
+/* Page navigation */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin-top: 30px;
+}
+
+.pagination button {
+    background: #202d3c;
+    border: 1px solid #35475c;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #247ee8;
+    border-color: #247ee8;
+}
+
+.pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.back-btn {
+    border-radius: 5px;
+}
+
+@media (max-width: 850px) {
+    .server-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .server-list {
+        grid-template-columns: 1fr;
+    }
+}
